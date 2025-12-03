@@ -180,10 +180,10 @@ body {
 
 .cartao-produto {
     /* Define o tamanho base do cartão para a rolagem */
-    width: 400px;
+    width: calc(33.33% - 20px);
     flex-shrink: 0;
     /* Impede que o cartão diminua */
-
+    margin: 0 10px;
     /* Estilos do cartão */
     text-decoration: none;
     color: #333;
@@ -426,4 +426,34 @@ body {
     font-size: 35px;
     font-weight: bold;
     cursor: pointer;
+}
+
+
+
+/* container da sacola */
+
+.containerSacola {
+    /* O elemento deve ter largura e altura definidas */
+    position: sticky; /* Habilita o modo "grudento" */
+    top: 25%;        /* O elemento vai grudar quando seu topo atingir 10px do topo da viewport */
+    width: 20%;
+    background-color: rgba(243, 243, 235, 0.521);
+    padding: 15px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+    border-radius: 15px;
+    height: 500px;
+    display: flex;
+    
+}
+.containerPrincipal {
+    display: flex; 
+    width: 100%;
+    position: relative;
+    
+}
+
+.container2 {
+    width: 80%;
+    /* Adicione padding ou margin para que o conteúdo não fique sob a sacola */
+    padding-right: 20px;
 }

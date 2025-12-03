@@ -10,11 +10,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body style="margin: 45px;">
     <nav class="navbar navbar-dark bg-dark fixed-top" style="border-radius: 7px;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><div class="logoimg"><img src="img/logo.jpg" alt="" style="max-width: 75px;"></div><div class="primiLogo"> Primi Piatti</div></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+        <div class="container-fluid" style="margin-left: 45px;">
+            <a class="navbar-brand" href="#">
+                <div class="logoimg"><img src="img/logo.jpg" alt="" style="max-width: 75px;"></div>
+                <div class="primiLogo"> Primi Piatti</div>
+            </a>
+
+
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -30,18 +35,21 @@
 
                 <div class="offcanvas-body" id="pedidos">
 
-
+-->
                     <!-- Aqui ficaram os pedidos -->
+                    <!--
                     <h3>
                         <p style="display: flex;justify-content: center; width: 100%; ">Pedido</p>
                     </h3>
-                    <button type="button" class="btn btn-success" style="width: 93%; position: absolute;bottom: 2%; ">Finalizar Pedido</button>
+                    <button type="button" class="btn btn-success"
+                        style="width: 93%; position: absolute;bottom: 2%; ">Finalizar Pedido</button>
 
                 </div>
             </div>
-        </div>
+        </div>-->
+            
     </nav>
-
+    <div style="margin-top: 100px;"></div>
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="5000">
@@ -67,389 +75,409 @@
     </div>
 
 
-<!-- navegação interna -->
-    <div class="menu-categorias">
-        <div class="titulo-secao">
-            <h2>Marmitas</h2>
-            <a href="#"></a>
-        </div>
-        
-        <div class="lista-opcoes">
-            
-            <a href="#" class="item-categoria">
-                <div class="circulo-imagem">
-                    
-                    <img src="img/carnes.jpg" alt="Carnes">
-                </div>
-                <p>Carnes</p>
-            </a>
-            
-            <a href="#" class="item-categoria">
-                <div class="circulo-imagem">
-                    <img src="img/marmita_frangos.jpg" alt="Frangos">
-                </div>
-                <p>Frangos</p>
-            </a>
+    <div class="containerPrincipal" style="position: relative;">
 
-            <a href="#" class="item-categoria">
-                <div class="circulo-imagem">
-                    <img src="img/parmegiana.jpg" alt="Frangos">
-                </div>
-                <p>Especiais</p>
-            </a>
-            
 
-            <a href="#" class="item-categoria">
-                <div class="circulo-imagem">
-                    <img src="img/espcial.jpg" alt="Frangos">
-                </div>
-                <p>Super Pratos</p>
-            </a>
 
-            <a href="#" class="item-categoria">
-                <div class="circulo-imagem">
-                    <img src="img/espcial.jpg" alt="Frangos">
-                </div>
-                <p>Super Pratos</p>
-            </a>
-            
+        <div class="container2" style="max-width: 80%;justify-content: left;">
 
+            <!-- navegação interna -->
+            <div class="menu-categorias">
+                <div class="titulo-secao">
+                    <h2>Marmitas</h2>
+                    <a href="#"></a>
+                </div>
+
+                <div class="lista-opcoes">
+
+                    <a href="#" class="item-categoria">
+                        <div class="circulo-imagem">
+
+                            <img src="img/carnes.jpg" alt="Carnes">
+                        </div>
+                        <p>Carnes</p>
+                    </a>
+
+                    <a href="#" class="item-categoria">
+                        <div class="circulo-imagem">
+                            <img src="img/marmita_frangos.jpg" alt="Frangos">
+                        </div>
+                        <p>Frangos</p>
+                    </a>
+
+                    <a href="#" class="item-categoria">
+                        <div class="circulo-imagem">
+                            <img src="img/parmegiana.jpg" alt="Frangos">
+                        </div>
+                        <p>Especiais</p>
+                    </a>
+
+                    <a href="#" class="item-categoria">
+                        <div class="circulo-imagem">
+                            <img src="img/espcial.jpg" alt="Frangos">
+                        </div>
+                        <p>Super Pratos</p>
+                    </a>
+
+                    <a href="#" class="item-categoria">
+                        <div class="circulo-imagem">
+                            <img src="img/espcial.jpg" alt="Frangos">
+                        </div>
+                        <p>Super Pratos</p>
+                    </a>
+
+
+                </div>
             </div>
+
+            <!-- pagina de menu das marmitas aqui ficam os pedidos cada menu esta separado por uma div lista-opcoes-wrapper -->
+
+            <div class="lista-opcoes-wrapper">
+                <h2>Especiais do dia</h2>
+                <button class="nav-btn prev-btn" aria-label="Anterior">&lt;</button>
+
+                <div class="lista-opcoes" id="listaMarmitas">
+                    <div class="menu-especiais">
+                        <div class="titulo-secao-especiais">
+
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="lista-cartoes">
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/fileFrango.jpg" alt="Rabanetes">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/milanesa.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/nuggets.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <button class="nav-btn next-btn" aria-label="Próximo">&gt;</button>
+            </div>
+
+            <div class="lista-opcoes-wrapper">
+                <h2>Frango</h2>
+                <button class="nav-btn prev-btn" aria-label="Anterior">&lt;</button>
+
+                <div class="lista-opcoes" id="listaMarmitas2">
+                    <div class="menu-especiais">
+                        <div class="titulo-secao-especiais">
+
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="lista-cartoes">
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/fileFrango.jpg" alt="Rabanetes">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/milanesa.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/nuggets.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <button class="nav-btn next-btn" aria-label="Próximo">&gt;</button>
+            </div>
+
+            <div class="lista-opcoes-wrapper">
+                <h2>Carnes</h2>
+                <button class="nav-btn prev-btn" aria-label="Anterior">&lt;</button>
+
+                <div class="lista-opcoes" id="listaMarmitas3">
+                    <div class="menu-especiais">
+                        <div class="titulo-secao-especiais">
+
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="lista-cartoes">
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/fileFrango.jpg" alt="Rabanetes">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/milanesa.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/nuggets.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <button class="nav-btn next-btn" aria-label="Próximo">&gt;</button>
+            </div>
+
+            <div class="lista-opcoes-wrapper">
+                <h2>Pratos Especiais</h2>
+                <button class="nav-btn prev-btn" aria-label="Anterior">&lt;</button>
+
+                <div class="lista-opcoes" id="listaMarmitas4">
+                    <div class="menu-especiais">
+                        <div class="titulo-secao-especiais">
+
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="lista-cartoes">
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/fileFrango.jpg" alt="Rabanetes">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/milanesa.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/nuggets.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <button class="nav-btn next-btn" aria-label="Próximo">&gt;</button>
+            </div>
+
+            <div class="lista-opcoes-wrapper">
+                <h2>Super Pratos</h2>
+                <button class="nav-btn prev-btn" aria-label="Anterior">&lt;</button>
+
+                <div class="lista-opcoes" id="listaMarmitas5">
+                    <div class="menu-especiais">
+                        <div class="titulo-secao-especiais">
+
+                            <a href="#"></a>
+                        </div>
+
+                        <div class="lista-cartoes">
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/fileFrango.jpg" alt="Rabanetes">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/milanesa.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/nuggets.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <button class="nav-btn next-btn" aria-label="Próximo">&gt;</button>
+            </div>
+
+            <!-- acaba aqui a pagina das marmitas -->
+
+        </div>
+        <!-- fecha aqui a div que está determinando o tamanho para 80% -->
+
+
+        <div class="containerSacola" style="justify-content: center; margin-top: 45px;">
+
+                <p style="margin-right: 60%;font-size: 18px;">Sua sacola</p>
+                <p>Limpar</p>
+            
+
+                <button type="button" class="btn btn-success" style="position: absolute; bottom: 15px; width: 80%; ">Finalizar Pedido</button>
+        </div>
+
+
     </div>
 
-<!-- pagina de menu das marmitas aqui ficam os pedidos cada menu esta separado por uma div lista-opcoes-wrapper -->
+    <footer>
 
-<div class="lista-opcoes-wrapper">
-    <h2>Especiais do dia</h2>
-    <button class="nav-btn prev-btn" aria-label="Anterior">&lt;</button>
-    
-    <div class="lista-opcoes" id="listaMarmitas">
-        <div class="menu-especiais">
-            <div class="titulo-secao-especiais">
-                
-                <a href="#"></a>
-            </div>
-            
-            <div class="lista-cartoes">
-                
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/fileFrango.jpg" alt="Rabanetes">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-                
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/milanesa.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-    
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/nuggets.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-    
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/passarinho.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-    
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/passarinho.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-                
-                </div>
-        </div>
-    </div>
-
-    <button class="nav-btn next-btn" aria-label="Próximo">&gt;</button>
-</div>
-
-<div class="lista-opcoes-wrapper">
-    <h2>Frango</h2>
-    <button class="nav-btn prev-btn" aria-label="Anterior">&lt;</button>
-    
-    <div class="lista-opcoes" id="listaMarmitas2">
-        <div class="menu-especiais">
-            <div class="titulo-secao-especiais">
-                
-                <a href="#"></a>
-            </div>
-            
-            <div class="lista-cartoes">
-                
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/fileFrango.jpg" alt="Rabanetes">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-                
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/milanesa.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-    
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/nuggets.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-    
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/passarinho.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-    
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/passarinho.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-                
-                </div>
-        </div>
-    </div>
-
-    <button class="nav-btn next-btn" aria-label="Próximo">&gt;</button>
-</div>
-
-<div class="lista-opcoes-wrapper">
-    <h2>Carnes</h2>
-    <button class="nav-btn prev-btn" aria-label="Anterior">&lt;</button>
-    
-    <div class="lista-opcoes" id="listaMarmitas3">
-        <div class="menu-especiais">
-            <div class="titulo-secao-especiais">
-                
-                <a href="#"></a>
-            </div>
-            
-            <div class="lista-cartoes">
-                
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/fileFrango.jpg" alt="Rabanetes">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-                
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/milanesa.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-    
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/nuggets.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-    
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/passarinho.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-    
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/passarinho.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-                
-                </div>
-        </div>
-    </div>
-
-    <button class="nav-btn next-btn" aria-label="Próximo">&gt;</button>
-</div>
-    
-<div class="lista-opcoes-wrapper">
-    <h2>Pratos Especiais</h2>
-    <button class="nav-btn prev-btn" aria-label="Anterior">&lt;</button>
-    
-    <div class="lista-opcoes" id="listaMarmitas4">
-        <div class="menu-especiais">
-            <div class="titulo-secao-especiais">
-                
-                <a href="#"></a>
-            </div>
-            
-            <div class="lista-cartoes">
-                
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/fileFrango.jpg" alt="Rabanetes">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-                
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/milanesa.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-    
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/nuggets.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-    
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/passarinho.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-    
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/passarinho.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-                
-                </div>
-        </div>
-    </div>
-
-    <button class="nav-btn next-btn" aria-label="Próximo">&gt;</button>
-</div>
-
-<div class="lista-opcoes-wrapper">
-    <h2>Super Pratos</h2>
-    <button class="nav-btn prev-btn" aria-label="Anterior">&lt;</button>
-    
-    <div class="lista-opcoes" id="listaMarmitas5">
-        <div class="menu-especiais">
-            <div class="titulo-secao-especiais">
-                
-                <a href="#"></a>
-            </div>
-            
-            <div class="lista-cartoes">
-                
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/fileFrango.jpg" alt="Rabanetes">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-                
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/milanesa.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-    
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/nuggets.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-    
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/passarinho.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-    
-                <a href="#" class="cartao-produto">
-                    <div class="imagem-quadrada">
-                        <img src="img/passarinho.jpg" alt="Cogumelos">
-                    </div>
-                    <p class="marca">Marca</p>
-                    <p class="nome-produto">Nome do produto</p>
-                    <p class="preco">$10,99</p>
-                </a>
-                
-                </div>
-        </div>
-    </div>
-
-    <button class="nav-btn next-btn" aria-label="Próximo">&gt;</button>
-</div>
-
-<!-- acaba aqui a pagina das marmitas -->
-
-
-<footer>
-
-</footer>
+    </footer>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
