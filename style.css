@@ -1,0 +1,459 @@
+body {
+    overflow-x: hidden;
+}
+
+
+#carouselExampleInterval .carousel-inner {
+    /* Define uma altura máxima, mas permite que seja menor se o conteúdo for menor */
+    max-height: 400px;
+    /* OU, se você quiser uma altura fixa, use 'height' */
+    /* height: 400px; */
+
+    /* Garante que o conteúdo que exceder a altura seja cortado */
+    overflow: hidden;
+}
+
+/* Garante que a imagem dentro se ajuste corretamente */
+#carouselExampleInterval .carousel-inner .carousel-item img {
+    /* Faz a imagem preencher a largura total */
+    width: 100%;
+    /* Garante que a imagem preencha a altura do contêiner, 
+       cortando o que for necessário para manter a proporção. */
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#carouselExampleInterval {
+    /* Opcional: Adiciona uma pequena sombra para destacar, se desejar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Define o arredondamento para o contêiner principal */
+    border-radius: 15px;
+    /* Garante que o conteúdo que exceder (as imagens) seja cortado */
+    overflow: hidden;
+}
+
+#carouselExampleInterval .carousel-inner .carousel-item img {
+    /* Define o mesmo arredondamento nas imagens para consistência */
+    border-radius: 15px;
+}
+
+
+.menu-categorias {
+    /* Define uma largura máxima para o bloco que será centralizado */
+    max-width: 900px;
+    /* Ajuste este valor conforme o layout desejado */
+
+    /* Centraliza o bloco na horizontal */
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 20px;
+}
+
+.titulo-secao {
+    display: flex;
+    justify-content: space-between;
+    /* Alinha o título e o ícone > nas extremidades */
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.lista-opcoes {
+    /* Usa Flexbox para colocar os itens lado a lado */
+    display: flex;
+    /* Permite que os itens sejam enrolados se não houver espaço (útil para mobile) */
+    flex-wrap: nowrap;
+    /* Remove a barra de rolagem horizontal padrão do navegador (se necessário) */
+    overflow-x: auto;
+    /* Adiciona espaço entre os itens */
+    gap: 15px;
+}
+
+.item-categoria {
+    /* Configura o item como um bloco de coluna (imagem em cima, texto em baixo) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centraliza a imagem e o texto */
+    text-decoration: none;
+    /* Remove o sublinhado do link */
+    color: #333;
+    /* Cor do texto (ajuste conforme o seu design) */
+    /* Garante que o item não diminua de tamanho, forçando o scroll (se houver muitos) */
+    flex-shrink: 0;
+
+    padding: 5px;
+}
+
+.circulo-imagem {
+    /* Define largura e altura iguais para formar um quadrado */
+    width: 150px;
+    height: 150px;
+    /* ARREDONDAMENTO MÁXIMO (50%) para transformar o quadrado em círculo */
+    border-radius: 50%;
+
+    /* Centraliza a imagem no meio do círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Opcional: Borda fina e fundo claro */
+    border: 1px solid #eee;
+    background-color: #f7f7f7;
+
+    /* Garante que a imagem que exceder o círculo seja cortada */
+    overflow: hidden;
+}
+
+.navbar-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.primiLogo {
+    padding-left: 15px;
+}
+
+/* parte do logo */
+.logoimg {
+    /* Define largura e altura iguais para formar um quadrado */
+    width: 50px;
+    height: 50px;
+    /* ARREDONDAMENTO MÁXIMO (50%) para transformar o quadrado em círculo */
+    border-radius: 50%;
+
+    /* Centraliza a imagem no meio do círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Opcional: Borda fina e fundo claro */
+    border: 1px solid #eee;
+    background-color: #f7f7f7;
+
+    /* Garante que a imagem que exceder o círculo seja cortada */
+    overflow: hidden;
+}
+
+
+
+.circulo-imagem img {
+    /* Faz a imagem preencher o espaço do contêiner */
+    width: 100%;
+    height: 100%;
+    /* Garante que a imagem preencha o círculo sem ser esticada, cortando o que for necessário */
+    object-fit: cover;
+}
+
+.item-categoria p {
+    /* Estilo do texto (Carnes, Frangos, etc.) */
+    margin-top: 8px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+
+/* Reutilize o estilo do título (ajustando a cor se necessário) */
+.titulo-secao-especiais {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0 20px;
+    /* Adicione padding se o contêiner principal não tiver */
+}
+
+/* O contêiner da lista de cartões usa a mesma lógica de scroll horizontal */
+.lista-cartoes {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    /* Espaçamento menor entre os cartões */
+    padding: 0 20px 20px;
+    /* Padding no final para a rolagem e na lateral */
+}
+
+
+.cartao-produto {
+    /* Define o tamanho base do cartão para a rolagem */
+    width: calc(33.33% - 20px);
+    flex-shrink: 0;
+    /* Impede que o cartão diminua */
+    margin: 0 10px;
+    /* Estilos do cartão */
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    /* Adiciona um leve arredondamento */
+    border-radius: 8px;
+
+    /* Ajuste o alinhamento do texto abaixo da imagem */
+    display: block;
+}
+
+.imagem-quadrada {
+    /* Define a largura e altura iguais para o contêiner da imagem */
+    width: 100%;
+    height: 250px;
+    /* Use o mesmo valor da largura do .cartao-produto para ficar quadrado */
+
+    /* Arredondamento apenas no topo para combinar com o cartão */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+    /* Garante que a imagem siga o arredondamento */
+    overflow: hidden;
+}
+
+.imagem-quadrada img {
+    /* Garante que a imagem preencha o espaço sem distorção */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.cartao-produto .marca {
+    /* Estilo da palavra "Marca" */
+    font-size: 0.8em;
+    color: #888;
+    margin: 5px 10px 0;
+}
+
+.cartao-produto .nome-produto {
+    /* Estilo do nome do produto */
+    font-size: 1em;
+    font-weight: 600;
+    margin: 2px 10px;
+    /* Garante que o texto não quebre em várias linhas (ajuste se precisar) */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cartao-produto .preco {
+    /* Estilo do preço */
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #000;
+    /* Cor escura para destaque */
+    margin: 2px 10px 10px;
+    /* Espaço na parte de baixo */
+}
+
+/* Parte de especiais do dia */
+.lista-opcoes-wrapper {
+    /* Contêiner que envolve tudo, deve ser posicionado relativo */
+    position: relative;
+    padding: 0 20px;
+    /* Adicione padding se o contêiner externo não tiver */
+}
+
+.lista-opcoes {
+    /* Mantém as propriedades de rolagem horizontal */
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    /* Adicione padding lateral esquerdo/direito se remover o padding do wrapper */
+}
+
+.nav-btn {
+    /* Estilo básico do botão */
+    position: absolute;
+    top: 50%;
+    /* Alinha verticalmente ao centro */
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    z-index: 10;
+    /* Garante que fique acima dos itens */
+}
+
+.prev-btn {
+    left: 10px;
+    /* Posição à esquerda (ajuste conforme o padding) */
+    display: none;
+    /* Começa escondido, só aparece com scroll (JS) */
+}
+
+.next-btn {
+    right: 10px;
+    /* Posição à direita (ajuste conforme o padding) */
+}
+
+
+/* ocultar a barra embaixo */
+
+
+.lista-opcoes,
+.lista-cartoes {
+    /* Mantém a rolagem, mas oculta a barra */
+    overflow-x: auto;
+}
+
+/* Oculta a barra de rolagem para Chrome, Safari e Edge */
+.lista-opcoes::-webkit-scrollbar,
+.lista-cartoes::-webkit-scrollbar {
+    display: none;
+}
+
+.lista-opcoes,
+.lista-cartoes {
+    /* Oculta a barra de rolagem para Firefox */
+    scrollbar-width: none;
+}
+
+/* botos de rolagem do menu das */
+/* Estilo Base para os Botões */
+.nav-btn {
+    /* ... (outras propriedades do botão, como posição e tamanho) ... */
+
+    /* Adiciona uma transição suave para as mudanças de estilo */
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.1s;
+}
+
+/* Efeito ao Passar o Mouse */
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+    /* Fundo mais opaco no hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito ao Clicar (Animação de "Pressionar") */
+.nav-btn:active {
+    /* Efeito sutil de compressão/movimento para baixo/dentro */
+    transform: translateY(-50%) scale(0.95);
+
+    /* Remove a sombra para simular que o botão está pressionado */
+    box-shadow: none;
+
+    /* Opcional: Altera a cor de fundo */
+    background-color: #eee;
+}
+
+
+/* Modal */
+
+
+/* Estilo do Modal (Mesmo princípio do anterior) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Conteúdo do Modal (Estrutura principal) */
+.modal-conteudo-produto {
+    background-color: #fff;
+    margin: 5% auto;
+    /* Um pouco mais para cima */
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    /* Mais largo para caber as duas colunas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Estrutura Flex para as Duas Colunas */
+.produto-detalhes {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    /* Alinha o conteúdo ao topo */
+}
+
+/* Coluna da Imagem */
+.produto-imagem {
+    flex: 1;
+    /* Ocupa 1 parte do espaço */
+}
+
+.produto-imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Coluna das Informações */
+.produto-info {
+    flex: 2;
+    /* Ocupa 2 partes do espaço (maior que a imagem) */
+}
+
+.preco-modal {
+    font-size: 1.8em;
+    color: #c9302c;
+    /* Exemplo de cor de destaque para o preço */
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+}
+
+.btn-adicionar {
+    background-color: #5cb85c;
+    /* Verde para ação */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-left: 15px;
+    display: inline-block;
+}
+
+/* Botão de Fechar */
+.fechar-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+/* container da sacola */
+
+.containerSacola {
+    /* O elemento deve ter largura e altura definidas */
+    position: sticky; /* Habilita o modo "grudento" */
+    top: 25%;        /* O elemento vai grudar quando seu topo atingir 10px do topo da viewport */
+    width: 20%;
+    background-color: rgba(243, 243, 235, 0.521);
+    padding: 15px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+    border-radius: 15px;
+    height: 500px;
+    display: flex;
+    
+}
+.containerPrincipal {
+    display: flex; 
+    width: 100%;
+    position: relative;
+    
+}
+
+.container2 {
+    width: 80%;
+    /* Adicione padding ou margin para que o conteúdo não fique sob a sacola */
+    padding-right: 20px;
+}
