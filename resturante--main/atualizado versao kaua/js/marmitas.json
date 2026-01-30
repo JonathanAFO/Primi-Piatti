@@ -1,0 +1,44 @@
+[
+    
+    {
+        "id": 1,
+        "nome": "File de Frango",
+        "marca": "Fit & Sabor",
+        "preco": 10.99,
+        "ingredientes": [
+            "Frango Desfiado",
+            "Batata Doce",
+            "Brócolis"
+        ],
+        "calorias": 450,
+        "imagem": "img/fileFrango.jpg"
+    },
+    {
+        "id": 2,
+        "nome": "Frango a Milanesa",
+        "marca": "Marmita Gold",
+        "preco": 12.50,
+        "ingredientes": [
+            "Frango a Milanesa",
+            "Arroz Integral",
+            "Feijão",
+            "Salada"
+        ],
+        "calorias": 600,
+        "imagem": "img/milanesa.jpg"
+    },
+    {
+        "id": 3,
+        "nome": "Nuggets",
+        "marca": "Fit & Sabor",
+        "preco": 19.90,
+        "ingredientes": [
+            "Nuggets",
+            "Arroz Integral",
+            "Feijão",
+            "Salada"
+        ],
+        "calorias": 520,
+        "imagem": "img/nuggets.jpg"
+    }
+]
