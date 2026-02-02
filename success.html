@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido Confirmado - Primi Piatti</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="success-container">
+    <div class="success-icon">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </div>
+    
+    <h1 class="success-title">Pedido Confirmado!</h1>
+    <p class="success-message">Seu pedido foi recebido e está sendo preparado</p>
+    
+    <div class="success-order-id" id="orderId">
+      Carregando...
+    </div>
+    
+    <div style="display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 300px;">
+      <a href="index.html" class="btn-primary" style="text-align: center;">
+        Voltar ao Cardápio
+      </a>
+      <a href="acompanhar.html" class="btn-secondary" style="text-align: center;">
+        Acompanhar Pedido
+      </a>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const params = new URLSearchParams(window.location.search);
+      const orderId = params.get('order');
+      
+      if (orderId) {
+        document.getElementById('orderId').textContent = 'Pedido #' + orderId;
+      } else {
+        document.getElementById('orderId').textContent = 'Pedido confirmado';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Primi Piatti Admin</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+ 
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar Overlay (mobile) -->
+        <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+ 
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="sidebar-logo">Primi Piatti</a>
+                <span class="sidebar-subtitle">Painel Administrativo</span>
+            </div>
+ 
+            <nav class="sidebar-nav">
+                <span class="nav-section-title">Menu</span>
+ 
+                <a href="#" class="nav-link active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                       
+ 
+                    </svg>
+                    Meus Pedidos
+                </a>
+ 
+            </nav>
+ 
+            <div class="sidebar-footer">
+                <a href="index.html">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                    Voltar à Loja
+                </a>
+            </div>
+        </aside>
+ 
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <button class="mobile-menu-btn" onclick="toggleSidebar()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <h1 class="admin-title">Dashboard</h1>
+                <div></div>
+            </header>
+ 
+            <div class="container-fluid mt-4">
+                <div class="card w-100 shadow-sm border-0 bg-light">
+                    <div class="card-body d-flex align-items-center justify-content-between flex-wrap gap-4">
+ 
+                        <div style="min-width: 150px;">
+                            <h6 class="text-muted mb-0 small">Pedido #1234</h6>
+                            <strong id="status-texto" class="d-block text-primary">Em Preparo</strong>
+                        </div>
+ 
+                        <div class="flex-grow-1 px-md-4">
+                            <div class="d-flex justify-content-between mb-2 small fw-bold text-center">
+                                <span class="status-label text-primary" style="width: 25%;">Em Preparo</span>
+                                <span class="status-label text-muted" style="width: 25%;">Pronto</span>
+                                <span class="status-label text-muted" style="width: 25%;">Em Entrega</span>
+                                <span class="status-label text-muted" style="width: 25%;">Concluído</span>
+                            </div>
+                            <div class="progress" style="height: 12px; border-radius: 10px;">
+                                <div id="progresso-barra"
+                                    class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                                    role="progressbar" style="width: 25%"></div>
+                            </div>
+                        </div>
+ 
+                        <div id="container-botao">
+                            <button id="btn-cancelar" type="button" class="btn btn-outline-danger btn-sm px-4">
+                                Solicitar Cancelamento
+                            </button>
+                        </div>
+                    </div>
+                    <h3 id="horario" style="display: flex; align-items: center;justify-content: center;">Horario Estimado de Entrega: 12:40</h3>
+                   
+                </div>
+ 
+                <div class="mt-4 text-center">
+                    <button onclick="proximoPasso()" class="btn btn-dark">Simular Próximo Passo</button>
+                </div>
+            </div>
+ 
+            <script>
+                let etapaAtual = 1;
+ 
+                function proximoPasso() {
+                    etapaAtual++;
+                    const barra = document.getElementById('progresso-barra');
+                    const labels = document.querySelectorAll('.status-label');
+                    const statusTexto = document.getElementById('status-texto');
+                    const btnCancelar = document.getElementById('btn-cancelar');
+                    const statusHorario = document.getElementById('horario');
+ 
+                    if (etapaAtual === 2) {
+                        barra.style.width = "50%";
+                        labels[1].classList.replace('text-muted', 'text-primary');
+                        statusTexto.innerText = "Pronto";
+                    }
+                    else if (etapaAtual === 3) {
+                        barra.style.width = "75%";
+                        labels[2].classList.replace('text-muted', 'text-primary');
+                        statusTexto.innerText = "Em Entrega";
+                        btnCancelar.classList.add('disabled');
+                    }
+                    else if (etapaAtual === 4) {
+                        // ESTADO CONCLUÍDO (FOSCO E SEM ANIMAÇÃO)
+                        barra.style.width = "100%";
+                        barra.classList.remove('progress-bar-animated', 'progress-bar-striped');
+                        barra.style.opacity = "0.5"; // Efeito fosco
+ 
+                        // Atualiza Labels
+                        labels.forEach(l => l.classList.replace('text-primary', 'text-success'));
+                        labels[3].classList.replace('text-muted', 'text-success');
+                        statusTexto.innerText = "Pedido Entregue!";
+                        statusTexto.classList.replace('text-primary', 'text-success');
+                        statusHorario.innerText = "Pedido Entregue!";
+ 
+                        // Transforma o Botão
+                        btnCancelar.classList.replace('btn-outline-danger', 'btn-success');
+                     
+                        btnCancelar.innerHTML = "✓ Concluído";
+                        btnCancelar.style.cursor = "default";
+                    }
+                }
+            </script>
+            <script src="../js/data.js"></script>
+            <script src="../js/admin.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                crossorigin="anonymous"></script>
+</body>
+ 
+</html>

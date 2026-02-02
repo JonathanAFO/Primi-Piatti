@@ -7,59 +7,59 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="inicio.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap"
+        rel="stylesheet">
+
 </head>
 
-<body style="margin: 45px;">
-    <nav class="navbar navbar-dark bg-dark fixed-top" style="border-radius: 7px;">
-        <div class="container-fluid" style="margin-left: 45px;">
-            <a class="navbar-brand" href="#">
-                <div class="logoimg"><img src="img/logo.jpg" alt="" style="max-width: 75px;"></div>
-                <div class="primiLogo"> Primi Piatti</div>
-            </a>
+<body
+    style="margin: 45px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo"><img src="img/logo.jpg" alt="" width="80px" height="80px"></h1>
+            <p class="tagline">Marmitas Pronta-Entrega</p>
+        </div>
 
+        <div class="header-actions">
 
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <!-- Login / Usuário -->
+            <button class="user-btn">
+                <a href="/atualizado versao kaua/admin/index.html">   <img src="/atualizado versao kaua/placeholder-user.jpg" alt="Usuário"> </a>
             </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                aria-labelledby="offcanvasDarkNavbarLabel" style="border-radius: 15px;">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
+
+            <!-- Carrinho (MOBILE) -->
+            <button class="cart-btn mobile-cart" onclick="goToCart()" hidden>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+
+        </div>
+
+    </header>
 
 
-                <div class="offcanvas-body" id="pedidos">
 
--->
-                    <!-- Aqui ficaram os pedidos -->
-                    <!--
-                    <h3>
-                        <p style="display: flex;justify-content: center; width: 100%; ">Pedido</p>
-                    </h3>
-                    <button type="button" class="btn btn-success"
-                        style="width: 93%; position: absolute;bottom: 2%; ">Finalizar Pedido</button>
-
-                </div>
-            </div>
-        </div>-->
-            
-    </nav>
-    <div style="margin-top: 100px;"></div>
+    <div style="margin-top: 20px;"></div>
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="5000">
-                <img src="img/exe.jpg" class="d-block w-100" alt="...">
+                <img src="img/banner1c.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="img/exe.jpg" class="d-block w-100" alt="...">
+                <img src="img/banner2c.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="img/exe.jpg" class="d-block w-100" alt="...">
+                <img src="img/baner3ce.png" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
@@ -79,9 +79,9 @@
 
 
 
-        <div class="container2" style="max-width: 80%;justify-content: left;">
+        <div id="produtos-container" class="container2" style="max-width: 80%;justify-content: left;" >
 
-            <!-- navegação interna -->
+
             <div class="menu-categorias">
                 <div class="titulo-secao">
                     <h2>Marmitas</h2>
@@ -90,24 +90,23 @@
 
                 <div class="lista-opcoes">
 
-                    <a href="#" class="item-categoria">
+                    <a href="#" class="item-categoria"  >
                         <div class="circulo-imagem">
-
                             <img src="img/carnes.jpg" alt="Carnes">
                         </div>
                         <p>Carnes</p>
                     </a>
-
-                    <a href="#" class="item-categoria">
+                    
+                    <a href="#" class="item-categoria" data-categoria="frangos">
                         <div class="circulo-imagem">
                             <img src="img/marmita_frangos.jpg" alt="Frangos">
                         </div>
                         <p>Frangos</p>
                     </a>
-
-                    <a href="#" class="item-categoria">
+                    
+                    <a href="#" class="item-categoria" data-categoria="especiais">
                         <div class="circulo-imagem">
-                            <img src="img/parmegiana.jpg" alt="Frangos">
+                            <img src="img/parmegiana.jpg">
                         </div>
                         <p>Especiais</p>
                     </a>
@@ -128,13 +127,17 @@
 
 
                 </div>
-            </div>
+            </div> 
+
+
+            
+            
 
             <!-- pagina de menu das marmitas aqui ficam os pedidos cada menu esta separado por uma div lista-opcoes-wrapper -->
 
             <div class="lista-opcoes-wrapper">
                 <h2>Especiais do dia</h2>
-                <button class="nav-btn prev-btn" aria-label="Anterior">&lt;</button>
+
 
                 <div class="lista-opcoes" id="listaMarmitas">
                     <div class="menu-especiais">
@@ -145,61 +148,95 @@
 
                         <div class="lista-cartoes">
 
-                            <a href="#" class="cartao-produto">
+                            <a href="#" class="cartao-produto" data-modal-target="modal-1" data-categoria="frangos">
                                 <div class="imagem-quadrada">
-                                    <img src="img/fileFrango.jpg" alt="Rabanetes">
+                                    <img src="img/fileFrango.jpg" alt="frango">
                                 </div>
                                 <p class="marca">Marca</p>
                                 <p class="nome-produto">Nome do produto</p>
-                                <p class="preco">$10,99</p>
+
+                                <div class="box-preco">
+                                 <span class="preco-antigo">R$ 29,90</span>
+                                <span class="preco">R$ 23,90</span>
+                                </div>
+                            </a>
+
+
+                            <!-- Esse Modal vou usar depois no js mas deixa salvo aqui -->
+                            <!-- Modal que abre ao clicar em frango -->
+                            <!-- <div id="modalFrango" class="modal">
+                                <div class="modal-content">
+                                    <span class="close-btn">&times;</span>
+                                    <h2>Detalhes do Produto: Nome do produto</h2>
+                                    
+                            
+                            <img src="img/fileFrango.jpg" alt="">
+                            
+                                    <p>Marca: Marca</p>
+                                    <p>Preço: $10,99</p>
+                                    <p>Descrição completa...</p>
+                                </div>
+                            </div> -->
+
+                            <a href="#" class="cartao-produto" data-modal-target="modal-1" data-categoria="frangos">
+                                <div class="imagem-quadrada">
+                                    <img src="img/fileFrango.jpg" alt="frango">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+
+                                <div class="box-preco">
+                                 <span class="preco-antigo">R$ 29,90</span>
+                                <span class="preco">R$ 23,90</span>
+                                </div>
+                            </a>
+
+                            
+                           
+
+                            <a href="#" class="cartao-produto" data-modal-target="modal-3" data-categoria="carnes">
+                                <div class="imagem-quadrada">
+                                    <img src="img/nuggets.jpg" alt="nuggets">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <div class="box-preco">
+                                    <span class="preco-antigo">R$ 29,90</span>
+                                   <span class="preco">R$ 23,90</span>
+                                   </div>
                             </a>
 
                             <a href="#" class="cartao-produto">
                                 <div class="imagem-quadrada">
-                                    <img src="img/milanesa.jpg" alt="Cogumelos">
+                                    <img src="img/passarinho.jpg" alt="passarinho" data-categoria="carnes">
                                 </div>
                                 <p class="marca">Marca</p>
                                 <p class="nome-produto">Nome do produto</p>
-                                <p class="preco">$10,99</p>
+                                <div class="box-preco">
+                                    <span class="preco-antigo">R$ 29,90</span>
+                                   <span class="preco">R$ 23,90</span>
+                                   </div>
                             </a>
 
-                            <a href="#" class="cartao-produto">
+                            <a href="#" class="cartao-produto" data-categoria="especiais">
                                 <div class="imagem-quadrada">
-                                    <img src="img/nuggets.jpg" alt="Cogumelos">
+                                    <img src="img/carnes.jpg" alt="Cogumelos">
                                 </div>
                                 <p class="marca">Marca</p>
                                 <p class="nome-produto">Nome do produto</p>
-                                <p class="preco">$10,99</p>
-                            </a>
-
-                            <a href="#" class="cartao-produto">
-                                <div class="imagem-quadrada">
-                                    <img src="img/passarinho.jpg" alt="Cogumelos">
-                                </div>
-                                <p class="marca">Marca</p>
-                                <p class="nome-produto">Nome do produto</p>
-                                <p class="preco">$10,99</p>
-                            </a>
-
-                            <a href="#" class="cartao-produto">
-                                <div class="imagem-quadrada">
-                                    <img src="img/passarinho.jpg" alt="Cogumelos">
-                                </div>
-                                <p class="marca">Marca</p>
-                                <p class="nome-produto">Nome do produto</p>
-                                <p class="preco">$10,99</p>
+                                <div class="box-preco">
+                                    <span class="preco-antigo">R$ 29,90</span>
+                                   <span class="preco">R$ 23,90</span>
+                                   </div>
                             </a>
 
                         </div>
                     </div>
                 </div>
-
-                <button class="nav-btn next-btn" aria-label="Próximo">&gt;</button>
             </div>
 
             <div class="lista-opcoes-wrapper">
                 <h2>Frango</h2>
-                <button class="nav-btn prev-btn" aria-label="Anterior">&lt;</button>
 
                 <div class="lista-opcoes" id="listaMarmitas2">
                     <div class="menu-especiais">
@@ -210,61 +247,79 @@
 
                         <div class="lista-cartoes">
 
-                            <a href="#" class="cartao-produto">
+                            <a href="#" class="cartao-produto" data-modal-target="modal-1" data-categoria="frangos">
                                 <div class="imagem-quadrada">
-                                    <img src="img/fileFrango.jpg" alt="Rabanetes">
+                                    <img src="img/marmita_frangos.jpg" alt="frango">
                                 </div>
                                 <p class="marca">Marca</p>
                                 <p class="nome-produto">Nome do produto</p>
-                                <p class="preco">$10,99</p>
+
+                                <div class="box-preco">
+                                 <span class="preco-antigo">R$ 29,90</span>
+                                <span class="preco">R$ 23,90</span>
+                                </div>
                             </a>
 
-                            <a href="#" class="cartao-produto">
+                            <a href="#" class="cartao-produto" data-modal-target="modal-1" data-categoria="frangos">
                                 <div class="imagem-quadrada">
-                                    <img src="img/milanesa.jpg" alt="Cogumelos">
+                                    <img src="img/nuggets.jpg" alt="frango">
                                 </div>
                                 <p class="marca">Marca</p>
                                 <p class="nome-produto">Nome do produto</p>
-                                <p class="preco">$10,99</p>
+
+                                <div class="box-preco">
+                                 <span class="preco-antigo">R$ 29,90</span>
+                                <span class="preco">R$ 23,90</span>
+                                </div>
                             </a>
 
-                            <a href="#" class="cartao-produto">
+                            <a href="#" class="cartao-produto" data-modal-target="modal-1" data-categoria="frangos">
                                 <div class="imagem-quadrada">
-                                    <img src="img/nuggets.jpg" alt="Cogumelos">
+                                    <img src="img/carnes.jpg" alt="frango">
                                 </div>
                                 <p class="marca">Marca</p>
                                 <p class="nome-produto">Nome do produto</p>
-                                <p class="preco">$10,99</p>
+
+                                <div class="box-preco">
+                                 <span class="preco-antigo">R$ 29,90</span>
+                                <span class="preco">R$ 23,90</span>
+                                </div>
                             </a>
 
-                            <a href="#" class="cartao-produto">
+                            <a href="#" class="cartao-produto" data-modal-target="modal-1" data-categoria="frangos">
                                 <div class="imagem-quadrada">
-                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                    <img src="img/milanesa.jpg" alt="frango">
                                 </div>
                                 <p class="marca">Marca</p>
                                 <p class="nome-produto">Nome do produto</p>
-                                <p class="preco">$10,99</p>
+
+                                <div class="box-preco">
+                                 <span class="preco-antigo">R$ 29,90</span>
+                                <span class="preco">R$ 23,90</span>
+                                </div>
                             </a>
 
-                            <a href="#" class="cartao-produto">
+                            <a href="#" class="cartao-produto" data-modal-target="modal-1" data-categoria="frangos">
                                 <div class="imagem-quadrada">
-                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                    <img src="img/passarinho.jpg" alt="frango">
                                 </div>
                                 <p class="marca">Marca</p>
                                 <p class="nome-produto">Nome do produto</p>
-                                <p class="preco">$10,99</p>
+
+                                <div class="box-preco">
+                                 <span class="preco-antigo">R$ 29,90</span>
+                                <span class="preco">R$ 23,90</span>
+                                </div>
                             </a>
 
                         </div>
                     </div>
                 </div>
 
-                <button class="nav-btn next-btn" aria-label="Próximo">&gt;</button>
             </div>
 
             <div class="lista-opcoes-wrapper">
                 <h2>Carnes</h2>
-                <button class="nav-btn prev-btn" aria-label="Anterior">&lt;</button>
 
                 <div class="lista-opcoes" id="listaMarmitas3">
                     <div class="menu-especiais">
@@ -324,12 +379,10 @@
                     </div>
                 </div>
 
-                <button class="nav-btn next-btn" aria-label="Próximo">&gt;</button>
             </div>
 
             <div class="lista-opcoes-wrapper">
                 <h2>Pratos Especiais</h2>
-                <button class="nav-btn prev-btn" aria-label="Anterior">&lt;</button>
 
                 <div class="lista-opcoes" id="listaMarmitas4">
                     <div class="menu-especiais">
@@ -340,61 +393,75 @@
 
                         <div class="lista-cartoes">
 
-                            <a href="#" class="cartao-produto">
+                            <a href="#" class="cartao-produto" data-modal-target="modal-3" data-categoria="carnes">
                                 <div class="imagem-quadrada">
-                                    <img src="img/fileFrango.jpg" alt="Rabanetes">
+                                    <img src="img/nuggets.jpg" alt="nuggets">
                                 </div>
                                 <p class="marca">Marca</p>
                                 <p class="nome-produto">Nome do produto</p>
-                                <p class="preco">$10,99</p>
+                                <div class="box-preco">
+                                    <span class="preco-antigo">R$ 29,90</span>
+                                   <span class="preco">R$ 23,90</span>
+                                   </div>
                             </a>
 
-                            <a href="#" class="cartao-produto">
+                            <a href="#" class="cartao-produto" data-modal-target="modal-3" data-categoria="carnes">
                                 <div class="imagem-quadrada">
-                                    <img src="img/milanesa.jpg" alt="Cogumelos">
+                                    <img src="img/nuggets.jpg" alt="nuggets">
                                 </div>
                                 <p class="marca">Marca</p>
                                 <p class="nome-produto">Nome do produto</p>
-                                <p class="preco">$10,99</p>
+                                <div class="box-preco">
+                                    <span class="preco-antigo">R$ 29,90</span>
+                                   <span class="preco">R$ 23,90</span>
+                                   </div>
                             </a>
 
-                            <a href="#" class="cartao-produto">
+                            <a href="#" class="cartao-produto" data-modal-target="modal-3" data-categoria="carnes">
                                 <div class="imagem-quadrada">
-                                    <img src="img/nuggets.jpg" alt="Cogumelos">
+                                    <img src="img/nuggets.jpg" alt="nuggets">
                                 </div>
                                 <p class="marca">Marca</p>
                                 <p class="nome-produto">Nome do produto</p>
-                                <p class="preco">$10,99</p>
+                                <div class="box-preco">
+                                    <span class="preco-antigo">R$ 29,90</span>
+                                   <span class="preco">R$ 23,90</span>
+                                   </div>
                             </a>
 
-                            <a href="#" class="cartao-produto">
+                            <a href="#" class="cartao-produto" data-modal-target="modal-3" data-categoria="carnes">
                                 <div class="imagem-quadrada">
-                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                    <img src="img/nuggets.jpg" alt="nuggets">
                                 </div>
                                 <p class="marca">Marca</p>
                                 <p class="nome-produto">Nome do produto</p>
-                                <p class="preco">$10,99</p>
+                                <div class="box-preco">
+                                    <span class="preco-antigo">R$ 29,90</span>
+                                   <span class="preco">R$ 23,90</span>
+                                   </div>
                             </a>
 
-                            <a href="#" class="cartao-produto">
+                            <a href="#" class="cartao-produto" data-modal-target="modal-3" data-categoria="carnes">
                                 <div class="imagem-quadrada">
-                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                    <img src="img/nuggets.jpg" alt="nuggets">
                                 </div>
                                 <p class="marca">Marca</p>
                                 <p class="nome-produto">Nome do produto</p>
-                                <p class="preco">$10,99</p>
+                                <div class="box-preco">
+                                    <span class="preco-antigo">R$ 29,90</span>
+                                   <span class="preco">R$ 23,90</span>
+                                   </div>
                             </a>
 
                         </div>
                     </div>
                 </div>
 
-                <button class="nav-btn next-btn" aria-label="Próximo">&gt;</button>
+
             </div>
 
             <div class="lista-opcoes-wrapper">
                 <h2>Super Pratos</h2>
-                <button class="nav-btn prev-btn" aria-label="Anterior">&lt;</button>
 
                 <div class="lista-opcoes" id="listaMarmitas5">
                     <div class="menu-especiais">
@@ -405,13 +472,16 @@
 
                         <div class="lista-cartoes">
 
-                            <a href="#" class="cartao-produto">
+                            <a href="#" class="cartao-produto" data-modal-target="modal-3" data-categoria="carnes">
                                 <div class="imagem-quadrada">
-                                    <img src="img/fileFrango.jpg" alt="Rabanetes">
+                                    <img src="img/carnes.jpg" alt="nuggets">
                                 </div>
                                 <p class="marca">Marca</p>
                                 <p class="nome-produto">Nome do produto</p>
-                                <p class="preco">$10,99</p>
+                                <div class="box-preco">
+                                    <span class="preco-antigo">R$ 29,90</span>
+                                   <span class="preco">R$ 23,90</span>
+                                   </div>
                             </a>
 
                             <a href="#" class="cartao-produto">
@@ -450,30 +520,169 @@
                                 <p class="preco">$10,99</p>
                             </a>
 
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
+                            <a href="#" class="cartao-produto">
+                                <div class="imagem-quadrada">
+                                    <img src="img/passarinho.jpg" alt="Cogumelos">
+                                </div>
+                                <p class="marca">Marca</p>
+                                <p class="nome-produto">Nome do produto</p>
+                                <p class="preco">$10,99</p>
+                            </a>
+
                         </div>
                     </div>
                 </div>
 
-                <button class="nav-btn next-btn" aria-label="Próximo">&gt;</button>
             </div>
 
+            
             <!-- acaba aqui a pagina das marmitas -->
+            <div id="modalContainer"></div>
+              
+            <!-- acaba aqui a pagina das marmitas -->
+
+
+
 
         </div>
         <!-- fecha aqui a div que está determinando o tamanho para 80% -->
+        <!-- Parte da sacola -->
 
+        <!-- SACOLA DESKTOP -->
+        <div class="containerSacola sacola-desktop">
 
-        <div class="containerSacola" style="justify-content: center; margin-top: 45px;">
+            <div class="sacola-header">
+                <p>Sacola</p>
+                <p id="limpar-sacola" class="clicavel" style="color: rgb(233, 58, 58);">Limpar</p>
+            </div>
 
-                <p style="margin-right: 60%;font-size: 18px;">Sua sacola</p>
-                <p>Limpar</p>
-            
+            <!-- ITENS ÚNICOS -->
+            <div class="sacola-itens"></div>
 
-                <button type="button" class="btn btn-success" style="position: absolute; bottom: 15px; width: 80%; ">Finalizar Pedido</button>
+            <p id="total-sacola" style="margin-top: 270px; display: flex;justify-content: center;">Total: R$ 0,00</p>
+
+            <button type="button" class="btn btn-danger btn-finalizar-desktop" data-bs-toggle="modal"
+                data-bs-target="#modalLocalizacao">
+                Finalizar Pedido
+            </button>
+        </div>
+
+        <!-- MODAL SACOLA MOBILE -->
+        <div class="modal-sacola-mobile" id="modalSacolaMobile">
+            <div class="modal-sacola-content">
+
+                <div class="modal-sacola-header">
+                    <h3>Sua sacola</h3>
+
+                    <div class="modal-sacola-actions">
+                        <span class="limpar-sacola">Limpar</span>
+                        <button class="close-modal-sacola" onclick="closeMobileCart()">✕</button>
+                    </div>
+                </div>
+
+                <div class="modal-sacola-body">
+                    <!-- MESMO CONTAINER -->
+                    <div class="sacola-itens"></div>
+                    <p class="sacola-vazia">Sua sacola está vazia 🛒</p>
+                </div>
+
+                <div class="modal-sacola-footer">
+                    <button class="btn-finalizar" data-bs-toggle="modal" data-bs-target="#modalLocalizacao">
+                        Finalizar Pedido
+                    </button>
+                </div>
+
+            </div>
         </div>
 
 
+        <!-- FInaliza aqui a parte da sacola -->
+
     </div>
+    <div id="modais-container">
+
+    </div>
+
+    <div class="modal fade" id="modalLocalizacao" tabindex="-1" aria-hidden="true" style="z-index: 1060 !important;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Onde entregamos?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Seu Nome:</label>
+                        <input type="text" id="nomeCliente" class="form-control" placeholder="Ex: João Silva">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">WhatsApp / Telefone:</label>
+                        <input type="tel" id="telefoneCliente" class="form-control" placeholder="(00) 00000-0000">
+                    </div>
+
+                    <hr>
+                    <p>Para agilizar, podemos usar sua localização atual:</p>
+                    <button type="button" class="btn btn-outline-primary w-100 mb-3" onclick="obterLocalizacao()">
+                         Usar minha localização atual
+                    </button>
+
+                    <div class="form-group">
+                        <label class="form-label">Endereço de Entrega:</label>
+                        <input type="text" id="enderecoManual" class="form-control"
+                            placeholder="Rua, número, bairro...">
+                    </div>
+
+                    <div id="statusLocalizacao" class="small mt-2 text-muted"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-danger"> <a rel="stylesheet"
+                            href="/atualizado versao kaua/success.html" style="color: white;">Confirmar Endereço </a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <footer>
 
